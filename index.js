@@ -1,7 +1,7 @@
 function fun()
 {
     let city=document.getElementById('city').value
-    fetch(`https://api.openweathermap.org/data/2.5/weather/?q=${city}&appid=14372193bf29a2dc870dc2bd95597f96&units=metric`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather/?q=${city}&appid=<apikey>&units=metric`)
     .then(response=>response.json())
     .then(response=>
      {
@@ -15,7 +15,7 @@ function fun()
         
 
      })
-    fetch(`https://api.openweathermap.org/data/2.5/forecast/?q=${city}&appid=14372193bf29a2dc870dc2bd95597f96&units=metric`)
+    fetch(`https://api.openweathermap.org/data/2.5/forecast/?q=${city}&appid=<apikey>&units=metric`)
     .then(response=>response.json())
     .then(response=>{
         const data=response.list;
